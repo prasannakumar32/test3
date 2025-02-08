@@ -1,0 +1,1562 @@
+.allocation-container {
+  background: linear-gradient(135deg, #556b2f 0%, #6b8e23 100%);
+  min-height: 100vh;
+  padding: 24px;
+}
+
+.allocation-container::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    45deg,
+    rgba(255, 255, 255, 0.1) 0%,
+    rgba(255, 255, 255, 0.05) 100%
+  );
+  pointer-events: none;
+}
+
+.header-paper {
+  margin-bottom: 24px;
+  background-color: #556b2f !important;
+  color: #ffffff !important;
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 24px;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+}
+
+.power-icon {
+  margin-right: 16px;
+  font-size: 24px !important;
+  color: #ffffff !important;
+}
+
+.header-title {
+  font-weight: 600 !important;
+  color: #ffffff !important;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.username-text {
+  font-weight: 500 !important;
+  color: #ffffff !important;
+}
+
+.user-menu-container {
+  position: relative;
+}
+
+.user-menu-button {
+  padding: 0 !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 4px !important;
+}
+
+.user-avatar {
+  width: 40px !important;
+  height: 40px !important;
+  background-color: #6b8e23 !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.user-avatar:hover {
+  background-color: #556b2f !important;
+}
+
+.user-avatar svg {
+  color: #ffffff !important;
+  font-size: 20px;
+}
+
+.caret-icon {
+  color: #ffffff !important;
+  font-size: 12px;
+  margin-left: 4px;
+}
+
+.menu-icon {
+  color: #556b2f !important;
+  font-size: 18px !important;
+  width: 24px !important;
+}
+
+.account-dialog .dialog-title {
+  background-color: #556b2f !important;
+  color: #ffffff !important;
+  padding: 16px 24px !important;
+}
+
+.account-content {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.account-avatar-container {
+  margin-bottom: 24px;
+}
+
+.account-avatar {
+  width: 80px !important;
+  height: 80px !important;
+  background-color: #556b2f !important;
+}
+
+.account-avatar svg {
+  font-size: 40px !important;
+  color: #ffffff !important;
+}
+
+.account-details {
+  width: 100%;
+}
+
+.close-button {
+  color: #556b2f !important;
+}
+
+.main-content {
+  margin-top: 24px;
+}
+
+.sites-paper {
+  background: rgba(85, 107, 47, 0.9) !important;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2) !important;
+  padding: 24px;
+  height: 100%;
+  min-height: 500px;
+  border-radius: 8px;
+}
+
+.section-title {
+  color: #ffffff !important;
+  font-size: 1.25rem !important;
+  font-weight: 600 !important;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px !important;
+}
+
+.section-icon {
+  color: #ffffff !important;
+  font-size: 20px;
+}
+
+.section-divider {
+  background-color: rgba(255, 255, 255, 0.3) !important;
+  margin-bottom: 24px !important;
+  opacity: 0.5;
+}
+
+.sites-list {
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+.site-item {
+  padding: 20px !important;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-left: 4px solid transparent;
+  background: rgba(85, 107, 47, 0.9) !important;
+  backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  margin-bottom: 16px;
+  position: relative;
+  z-index: 1;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.site-item:hover {
+  background: rgba(85, 107, 47, 0.95) !important;
+  transform: translateX(4px);
+  border-left-color: #ffffff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.site-item.selected {
+  border-left-color: #ffffff;
+  background: rgba(85, 107, 47, 1) !important;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.site-item-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 12px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.site-type-icon {
+  color: #ffffff !important;
+  font-size: 22px !important;
+  opacity: 1;
+}
+
+.site-item-header .MuiTypography-subtitle1 {
+  color: #ffffff !important;
+  font-weight: 700 !important;
+  font-size: 1.1rem !important;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1) !important;
+  letter-spacing: 0.3px;
+}
+
+.site-item .MuiTypography-body2 {
+  color: #ffffff !important;
+  font-size: 0.95rem !important;
+  font-weight: 500 !important;
+  line-height: 1.6 !important;
+  margin: 4px 0;
+  letter-spacing: 0.2px;
+}
+
+.banking-info {
+  margin-top: 12px !important;
+  color: #ffffff !important;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-weight: 500;
+  font-size: 0.95rem !important;
+  padding-top: 8px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.power-details {
+  margin: 12px 0;
+  padding: 12px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 6px;
+}
+
+.power-value {
+  color: #ffffff !important;
+  font-size: 1.1rem !important;
+  font-weight: 600 !important;
+  margin-bottom: 4px !important;
+}
+
+.power-label {
+  color: rgba(255, 255, 255, 0.9) !important;
+  font-size: 0.9rem !important;
+  font-weight: 500 !important;
+}
+
+.detail-section {
+  margin-bottom: 20px;
+  padding: 16px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.detail-section .MuiTypography-body1 {
+  color: #ffffff !important;
+  font-weight: 600 !important;
+  font-size: 1rem !important;
+  margin-bottom: 8px !important;
+  letter-spacing: 0.3px;
+}
+
+.detail-section .MuiTypography-body2 {
+  color: #ffffff !important;
+  font-size: 0.95rem !important;
+  font-weight: 500 !important;
+  line-height: 1.6 !important;
+  margin: 4px 0;
+  letter-spacing: 0.2px;
+}
+
+.detail-title {
+  color: #ffffff !important;
+  font-size: 1.2rem !important;
+  font-weight: 700 !important;
+  margin-bottom: 16px !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 12px !important;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.detail-icon {
+  color: #ffffff !important;
+  font-size: 24px !important;
+  opacity: 1;
+}
+
+.allocation-button-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 32px;
+  padding: 24px;
+  position: relative;
+  z-index: 10;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.1) 0%,
+    rgba(255, 255, 255, 0.15) 50%,
+    rgba(255, 255, 255, 0.1) 100%
+  );
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.get-allocation-button {
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.2) 0%,
+    rgba(255, 255, 255, 0.3) 50%,
+    rgba(255, 255, 255, 0.2) 100%
+  ) !important;
+  border: 1px solid rgba(255, 255, 255, 0.3) !important;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2) !important;
+  color: #ffffff !important;
+  font-size: 16px !important;
+  padding: 12px 32px !important;
+  border-radius: 8px !important;
+  text-transform: none !important;
+  transition: all 0.3s ease !important;
+  cursor: pointer !important;
+  z-index: 10 !important;
+  position: relative !important;
+  margin-top: 24px !important;
+}
+
+.get-allocation-button:hover:not(:disabled) {
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.3) 0%,
+    rgba(255, 255, 255, 0.4) 50%,
+    rgba(255, 255, 255, 0.3) 100%
+  ) !important;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3) !important;
+}
+
+.get-allocation-button:disabled {
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.1) 0%,
+    rgba(255, 255, 255, 0.15) 50%,
+    rgba(255, 255, 255, 0.1) 100%
+  ) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  box-shadow: none !important;
+  color: rgba(255, 255, 255, 0.7) !important;
+  cursor: not-allowed !important;
+  transform: none !important;
+}
+
+/* Dialog Styles */
+.MuiDialog-paper {
+  background: linear-gradient(135deg, #556b2f 0%, #6b8e23 100%) !important;
+  border-radius: 12px !important;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3) !important;
+  overflow: hidden !important;
+}
+
+.dialog-title {
+  background: rgba(85, 107, 47, 0.95) !important;
+  color: #ffffff !important;
+  padding: 20px 24px !important;
+  font-size: 1.3rem !important;
+  font-weight: 600 !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.dialog-content {
+  padding: 24px !important;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+/* Power Allocation Form */
+.allocation-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.allocation-form-section {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.allocation-form-title {
+  color: #ffffff !important;
+  font-size: 1.1rem !important;
+  font-weight: 600 !important;
+  margin-bottom: 16px !important;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.allocation-input-label {
+  color: #ffffff !important;
+  font-size: 0.95rem !important;
+  font-weight: 500 !important;
+  margin-bottom: 8px !important;
+}
+
+.allocation-input {
+  background: rgba(255, 255, 255, 0.15) !important;
+  border-radius: 6px !important;
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+  color: #ffffff !important;
+  font-size: 1rem !important;
+  padding: 12px !important;
+  margin-top: 4px !important;
+}
+
+.allocation-input:hover {
+  background: rgba(255, 255, 255, 0.2) !important;
+}
+
+.allocation-input:focus {
+  background: rgba(255, 255, 255, 0.25) !important;
+  border-color: rgba(255, 255, 255, 0.3) !important;
+}
+
+/* Site Details in Dialog */
+.site-details-section {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.site-details-title {
+  color: #ffffff !important;
+  font-size: 1.1rem !important;
+  font-weight: 600 !important;
+  margin-bottom: 16px !important;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.site-details-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.site-details-label {
+  color: rgba(255, 255, 255, 0.9) !important;
+  font-size: 0.9rem !important;
+  font-weight: 500 !important;
+}
+
+.site-details-value {
+  color: #ffffff !important;
+  font-size: 1rem !important;
+  font-weight: 600 !important;
+}
+
+/* Dialog Actions */
+.dialog-actions {
+  padding: 16px 24px !important;
+  background: rgba(85, 107, 47, 0.95) !important;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+}
+
+.dialog-button {
+  background: rgba(255, 255, 255, 0.15) !important;
+  color: #ffffff !important;
+  padding: 8px 24px !important;
+  font-size: 0.95rem !important;
+  font-weight: 500 !important;
+  text-transform: none !important;
+  border-radius: 6px !important;
+  transition: all 0.3s ease !important;
+}
+
+.dialog-button:hover {
+  background: rgba(255, 255, 255, 0.25) !important;
+}
+
+.dialog-button.primary {
+  background: rgba(255, 255, 255, 0.2) !important;
+}
+
+.dialog-button.primary:hover {
+  background: rgba(255, 255, 255, 0.3) !important;
+}
+
+/* Power Value Display */
+.power-value-display {
+  background: rgba(255, 255, 255, 0.15);
+  padding: 16px;
+  border-radius: 8px;
+  margin-top: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.power-value-title {
+  color: #ffffff !important;
+  font-size: 1rem !important;
+  font-weight: 600 !important;
+  margin-bottom: 8px !important;
+}
+
+.power-value-number {
+  color: #ffffff !important;
+  font-size: 1.5rem !important;
+  font-weight: 700 !important;
+}
+
+.power-value-unit {
+  color: rgba(255, 255, 255, 0.9) !important;
+  font-size: 0.9rem !important;
+  margin-left: 4px;
+}
+
+.dashboard-container {
+  background: linear-gradient(135deg, #556b2f 0%, #6b8e23 100%);
+  min-height: 100vh;
+  padding: 24px;
+}
+
+.dashboard-paper {
+  background: rgba(85, 107, 47, 0.9) !important;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2) !important;
+  padding: 24px;
+  border-radius: 12px;
+}
+
+.dashboard-title {
+  color: #ffffff !important;
+  font-size: 2rem !important;
+  font-weight: 600 !important;
+  margin-bottom: 24px !important;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.dashboard-subtitle {
+  color: rgba(255, 255, 255, 0.9) !important;
+  font-size: 1.25rem !important;
+  margin-bottom: 16px !important;
+}
+
+.dashboard-card {
+  background: rgba(85, 107, 47, 0.8) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(5px);
+  padding: 20px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.dashboard-card:hover {
+  background: rgba(85, 107, 47, 0.9) !important;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.dashboard-stat {
+  color: #ffffff !important;
+  font-size: 1.5rem !important;
+  font-weight: 600 !important;
+  margin-bottom: 8px !important;
+}
+
+.dashboard-label {
+  color: rgba(255, 255, 255, 0.9) !important;
+  font-size: 1rem !important;
+}
+
+.dashboard-icon {
+  color: #ffffff !important;
+  font-size: 24px !important;
+  margin-bottom: 16px !important;
+}
+
+/* Scrollbar Styles */
+.sites-list::-webkit-scrollbar {
+  width: 8px;
+}
+
+.sites-list::-webkit-scrollbar-track {
+  background: rgba(85, 107, 47, 0.1);
+  border-radius: 4px;
+}
+
+.sites-list::-webkit-scrollbar-thumb {
+  background: rgba(85, 107, 47, 0.3);
+  border-radius: 4px;
+}
+
+.sites-list::-webkit-scrollbar-thumb:hover {
+  background: rgba(85, 107, 47, 0.4);
+}
+
+/* Form Fields */
+.MuiInputLabel-root {
+  color: #ffffff !important;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.MuiOutlinedInput-root {
+  background: rgba(255, 255, 255, 0.9) !important;
+  backdrop-filter: blur(5px);
+  color: #ffffff !important;
+}
+
+.MuiOutlinedInput-root.Mui-focused {
+  background: rgba(255, 255, 255, 0.95) !important;
+}
+
+.MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline {
+  border-color: #556b2f !important;
+}
+
+.MuiInputLabel-root.Mui-focused {
+  color: #556b2f !important;
+}
+
+.MuiOutlinedInput-notchedOutline {
+  border-color: rgba(255, 255, 255, 0.3) !important;
+}
+
+.MuiOutlinedInput-root:hover .MuiOutlinedInput-notchedOutline {
+  border-color: rgba(255, 255, 255, 0.5) !important;
+}
+
+.dialog-site-name {
+  color: #ffffff !important;
+  font-size: 1.1rem !important;
+  font-weight: 600 !important;
+  margin-bottom: 8px !important;
+}
+
+.dialog-site-details {
+  color: rgba(255, 255, 255, 0.9) !important;
+  font-size: 0.95rem !important;
+}
+
+/* Dialog Content Typography */
+.MuiDialogContent-root .MuiTypography-root {
+  color: #ffffff !important;
+}
+
+.MuiDialogContent-root .MuiTypography-subtitle1 {
+  color: #ffffff !important;
+  font-weight: 600 !important;
+  font-size: 1.1rem !important;
+}
+
+.MuiDialogContent-root .MuiTypography-body1 {
+  color: #ffffff !important;
+  font-weight: 500 !important;
+}
+
+.MuiDialogContent-root .MuiTypography-body2 {
+  color: rgba(255, 255, 255, 0.9) !important;
+}
+
+/* Form Labels in Dialog */
+.MuiDialogContent-root .MuiFormLabel-root {
+  color: #ffffff !important;
+}
+
+.MuiDialogContent-root .MuiInputLabel-root {
+  color: #ffffff !important;
+}
+
+/* Dialog List Items */
+.MuiDialogContent-root .MuiListItem-root {
+  color: #ffffff !important;
+}
+
+.MuiDialogContent-root .MuiListItemText-primary {
+  color: #ffffff !important;
+  font-weight: 600 !important;
+}
+
+.MuiDialogContent-root .MuiListItemText-secondary {
+  color: rgba(255, 255, 255, 0.9) !important;
+}
+
+/* Site Selection in Dialog */
+.dialog-site-selection {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 16px;
+}
+
+.dialog-site-selection .MuiTypography-root {
+  color: #ffffff !important;
+}
+
+.dialog-site-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.dialog-site-icon {
+  color: #ffffff !important;
+  font-size: 20px !important;
+}
+
+.dialog-site-title {
+  color: #ffffff !important;
+  font-size: 1.1rem !important;
+  font-weight: 600 !important;
+  margin: 0 !important;
+}
+
+.dialog-site-info {
+  color: rgba(255, 255, 255, 0.9) !important;
+  font-size: 0.95rem !important;
+  margin: 4px 0 !important;
+}
+
+/* Selected Sites Display */
+.selected-sites-container {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  padding: 16px;
+  margin-top: 16px;
+}
+
+.selected-site-item {
+  padding: 12px;
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.05);
+  margin-bottom: 8px;
+}
+
+.selected-site-name {
+  color: #ffffff !important;
+  font-weight: 600 !important;
+  font-size: 1rem !important;
+  margin-bottom: 4px !important;
+}
+
+.selected-site-type {
+  color: rgba(255, 255, 255, 0.9) !important;
+  font-size: 0.9rem !important;
+}
+
+/* Input Styling */
+.MuiDialogContent-root .MuiInputBase-input {
+  color: #1a237e !important; /* Dark blue color */
+  font-weight: 500 !important;
+  font-size: 1rem !important;
+}
+
+.MuiDialogContent-root .MuiOutlinedInput-root {
+  background: rgba(255, 255, 255, 0.9) !important;
+}
+
+.MuiDialogContent-root .MuiOutlinedInput-notchedOutline {
+  border-color: rgba(26, 35, 126, 0.3) !important; /* Dark blue with opacity */
+}
+
+.MuiDialogContent-root .MuiOutlinedInput-root:hover .MuiOutlinedInput-notchedOutline {
+  border-color: rgba(26, 35, 126, 0.5) !important;
+}
+
+.MuiDialogContent-root .MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline {
+  border-color: #1a237e !important;
+}
+
+/* Input Label Color */
+.MuiDialogContent-root .MuiInputLabel-root.Mui-focused {
+  color: #1a237e !important;
+}
+
+/* Placeholder Text */
+.MuiDialogContent-root .MuiInputBase-input::placeholder {
+  color: rgba(26, 35, 126, 0.7) !important;
+}
+
+/* Number Input Specific */
+.MuiDialogContent-root input[type="number"] {
+  color: #1a237e !important;
+  font-weight: 600 !important;
+}
+
+/* Select Input */
+.MuiDialogContent-root .MuiSelect-select {
+  color: #1a237e !important;
+  background-color: rgba(255, 255, 255, 0.9) !important;
+}
+
+/* Dropdown Items */
+.MuiMenu-paper .MuiMenuItem-root {
+  color: #1a237e !important;
+}
+
+/* Input Helper Text */
+.MuiDialogContent-root .MuiFormHelperText-root {
+  color: rgba(26, 35, 126, 0.7) !important;
+}
+
+/* Active Input Background */
+.MuiDialogContent-root .MuiOutlinedInput-root.Mui-focused {
+  background: #ffffff !important;
+}
+
+/* Compact Input Styling */
+.MuiDialogContent-root .MuiInputBase-root {
+  height: 40px !important;
+  min-height: 40px !important;
+  font-size: 0.9rem !important;
+}
+
+.MuiDialogContent-root .MuiInputBase-input {
+  padding: 8px 12px !important;
+  height: 24px !important;
+  font-size: 0.9rem !important;
+}
+
+.MuiDialogContent-root .MuiOutlinedInput-root {
+  padding: 0 !important;
+}
+
+/* Compact Form Field Container */
+.MuiDialogContent-root .MuiFormControl-root {
+  margin: 8px 0 !important;
+}
+
+/* Compact Input Label */
+.MuiDialogContent-root .MuiInputLabel-root {
+  font-size: 0.9rem !important;
+  transform: translate(12px, 12px) scale(1) !important;
+}
+
+.MuiDialogContent-root .MuiInputLabel-shrink {
+  transform: translate(12px, -8px) scale(0.75) !important;
+}
+
+/* Compact Select */
+.MuiDialogContent-root .MuiSelect-select {
+  padding: 8px 12px !important;
+  min-height: unset !important;
+  font-size: 0.9rem !important;
+}
+
+/* Compact Dialog Content */
+.MuiDialogContent-root {
+  padding: 16px !important;
+}
+
+/* Compact Form Groups */
+.allocation-form-section {
+  padding: 12px !important;
+  margin-bottom: 12px !important;
+}
+
+/* Compact Site Selection */
+.dialog-site-selection {
+  padding: 12px !important;
+  margin-bottom: 12px !important;
+}
+
+.selected-site-item {
+  padding: 8px !important;
+  margin-bottom: 6px !important;
+}
+
+/* Compact Dialog Actions */
+.dialog-actions {
+  padding: 12px !important;
+}
+
+/* Compact Helper Text */
+.MuiDialogContent-root .MuiFormHelperText-root {
+  margin: 4px 0 0 !important;
+  font-size: 0.75rem !important;
+}
+
+/* Compact Number Input */
+.MuiDialogContent-root input[type="number"] {
+  padding: 8px 12px !important;
+}
+
+/* Field Spacing */
+.MuiDialogContent-root .MuiFormControl-root {
+  margin: 16px 0 !important;
+}
+
+/* Label Spacing */
+.MuiDialogContent-root .MuiInputLabel-root {
+  margin-bottom: 8px !important;
+  position: relative !important;
+  transform: none !important;
+  font-size: 0.9rem !important;
+  color: #ffffff !important;
+}
+
+/* Input Field Container */
+.MuiDialogContent-root .MuiOutlinedInput-root {
+  margin-top: 24px !important;
+}
+
+/* Form Field Groups */
+.allocation-form-section {
+  padding: 16px !important;
+  margin-bottom: 16px !important;
+}
+
+.form-field-group {
+  margin-bottom: 20px !important;
+}
+
+/* Individual Form Fields */
+.form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 16px !important;
+}
+
+.form-field-label {
+  font-size: 0.9rem !important;
+  color: #ffffff !important;
+  font-weight: 500 !important;
+  margin-bottom: 4px !important;
+}
+
+/* Select Field Spacing */
+.MuiDialogContent-root .MuiSelect-select {
+  margin-top: 8px !important;
+}
+
+/* Helper Text Spacing */
+.MuiDialogContent-root .MuiFormHelperText-root {
+  margin-top: 4px !important;
+}
+
+/* Field Section Spacing */
+.field-section {
+  margin-bottom: 24px !important;
+}
+
+.field-section:last-child {
+  margin-bottom: 0 !important;
+}
+
+/* Input Groups */
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 20px !important;
+}
+
+/* Adjust floating label position */
+.MuiDialogContent-root .MuiInputLabel-root.MuiInputLabel-shrink {
+  transform: translate(0, -16px) scale(0.75) !important;
+}
+
+.allocation-details-container {
+  background: linear-gradient(135deg, #556b2f 0%, #6b8e23 100%) !important;
+  padding: 16px !important;
+  margin: 16px 0 !important;
+}
+
+.allocation-detail-item {
+  background: transparent !important;
+  padding: 12px !important;
+  margin-bottom: 8px !important;
+}
+
+.allocation-detail-label {
+  color: #1a237e !important;
+  font-size: 0.9rem !important;
+  font-weight: 600 !important;
+  text-shadow: 0 0 2px rgba(255, 255, 255, 0.8) !important;
+}
+
+.allocation-detail-value {
+  color: #1a237e !important;
+  font-size: 1rem !important;
+  font-weight: 700 !important;
+  text-shadow: 0 0 2px rgba(255, 255, 255, 0.8) !important;
+}
+
+.allocation-header {
+  color: #1a237e !important;
+  font-size: 1.1rem !important;
+  font-weight: 700 !important;
+  background: transparent !important;
+  padding: 12px !important;
+  margin-bottom: 12px !important;
+  text-shadow: 0 0 2px rgba(255, 255, 255, 0.8) !important;
+}
+
+.allocation-total {
+  background: transparent !important;
+  padding: 12px !important;
+  margin-top: 12px !important;
+}
+
+.allocation-total-label {
+  color: #1a237e !important;
+  font-size: 1rem !important;
+  font-weight: 700 !important;
+  text-shadow: 0 0 2px rgba(255, 255, 255, 0.8) !important;
+}
+
+.allocation-total-value {
+  color: #1a237e !important;
+  font-size: 1.1rem !important;
+  font-weight: 800 !important;
+  text-shadow: 0 0 2px rgba(255, 255, 255, 0.8) !important;
+}
+
+.allocation-details-container * {
+  position: relative !important;
+}
+
+.allocation-details-container *::after {
+  content: "" !important;
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  bottom: 0 !important;
+  border-radius: inherit !important;
+  box-shadow: inset 0 0 2px rgba(255, 255, 255, 0.5) !important;
+  pointer-events: none !important;
+}
+
+.allocation-section-title {
+  color: #1a237e !important;
+  font-size: 1.2rem !important;
+  font-weight: 700 !important;
+  margin-bottom: 16px !important;
+  text-shadow: 0 0 2px rgba(255, 255, 255, 0.8) !important;
+}
+
+.site-name {
+  color: #1a237e !important;
+  font-size: 1.1rem !important;
+  font-weight: 600 !important;
+  margin-bottom: 8px !important;
+  text-shadow: 0 0 2px rgba(255, 255, 255, 0.8) !important;
+}
+
+.site-type,
+.site-capacity,
+.site-consumption,
+.site-priority,
+.allocation-amount,
+.allocation-priority,
+.allocation-time,
+.allocation-created {
+  color: #1a237e !important;
+  font-size: 1rem !important;
+  font-weight: 500 !important;
+  margin: 4px 0 !important;
+  text-shadow: 0 0 2px rgba(255, 255, 255, 0.8) !important;
+}
+
+.detail-label {
+  color: #1a237e !important;
+  font-weight: 600 !important;
+  margin-right: 8px !important;
+}
+
+.detail-value {
+  color: #1a237e !important;
+  font-weight: 500 !important;
+}
+
+/* Production Site Section */
+.production-site-section {
+  margin-bottom: 20px !important;
+}
+
+/* Consumption Site Section */
+.consumption-site-section {
+  margin-bottom: 20px !important;
+}
+
+/* Allocation Details Section */
+.allocation-details-section {
+  margin-bottom: 20px !important;
+}
+
+/* Time and Date Values */
+.time-value,
+.date-value {
+  color: #1a237e !important;
+  font-family: monospace !important;
+  font-size: 0.95rem !important;
+  font-weight: 500 !important;
+}
+
+/* Priority Tag */
+.priority-tag {
+  color: #1a237e !important;
+  font-weight: 600 !important;
+  background: rgba(255, 255, 255, 0.2) !important;
+  padding: 2px 8px !important;
+  border-radius: 4px !important;
+  border: 1px solid rgba(255, 255, 255, 0.4) !important;
+}
+
+/* Section Dividers */
+.section-divider {
+  border-top: 1px solid rgba(255, 255, 255, 0.3) !important;
+  margin: 16px 0 !important;
+}
+
+/* Container Styling */
+.details-container {
+  background: linear-gradient(135deg, #556b2f 0%, #6b8e23 100%) !important;
+  padding: 20px !important;
+}
+
+/* Detail Row */
+.detail-row {
+  display: flex !important;
+  align-items: center !important;
+  margin-bottom: 8px !important;
+  padding: 8px !important;
+  background: rgba(255, 255, 255, 0.1) !important;
+}
+
+.detail-panel {
+  background: rgba(255, 255, 255, 0.95) !important;
+  border-radius: 6px !important;
+  padding: 12px 16px !important;
+  margin-bottom: 12px !important;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1) !important;
+  border: 1px solid rgba(255, 255, 255, 0.9) !important;
+}
+
+.detail-title {
+  color: #1a237e !important;
+  font-size: 1.2rem !important;
+  font-weight: 700 !important;
+  margin-bottom: 12px !important;
+  padding-bottom: 8px !important;
+  border-bottom: 1px solid rgba(26, 35, 126, 0.2) !important;
+}
+
+.detail-row {
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  padding: 8px 0 !important;
+  border-bottom: 1px solid rgba(26, 35, 126, 0.1) !important;
+}
+
+.detail-row:last-child {
+  border-bottom: none !important;
+}
+
+.detail-label {
+  color: #1a237e !important;
+  font-weight: 600 !important;
+  font-size: 0.95rem !important;
+  flex: 1 !important;
+}
+
+.detail-value {
+  color: #1a237e !important;
+  font-weight: 500 !important;
+  font-size: 0.95rem !important;
+  text-align: right !important;
+  flex: 1 !important;
+}
+
+.site-name {
+  color: #1a237e !important;
+  font-size: 1.1rem !important;
+  font-weight: 600 !important;
+  margin-bottom: 8px !important;
+}
+
+.priority-tag {
+  background: rgba(26, 35, 126, 0.1) !important;
+  color: #1a237e !important;
+  padding: 4px 8px !important;
+  border-radius: 4px !important;
+  font-weight: 600 !important;
+  font-size: 0.9rem !important;
+}
+
+.time-value {
+  font-family: monospace !important;
+  color: #1a237e !important;
+  font-size: 0.95rem !important;
+}
+
+.section-header {
+  color: #ffffff !important;
+  font-size: 1.1rem !important;
+  font-weight: 600 !important;
+  margin: 16px 0 8px !important;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2) !important;
+}
+
+/* Production Site Panel */
+.production-site-panel {
+  border-left: 4px solid #1a237e !important;
+}
+
+/* Consumption Site Panel */
+.consumption-site-panel {
+  border-left: 4px solid #1a237e !important;
+}
+
+/* Allocation Details Panel */
+.allocation-details-panel {
+  border-left: 4px solid #1a237e !important;
+}
+
+/* Capacity and Consumption Values */
+.power-value {
+  font-weight: 600 !important;
+  color: #1a237e !important;
+}
+
+.power-unit {
+  color: #1a237e !important;
+  opacity: 0.8 !important;
+  margin-left: 4px;
+}
+
+/* Created Date */
+.created-date {
+  font-family: monospace !important;
+  color: #1a237e !important;
+  font-size: 0.9rem !important;
+  opacity: 0.9 !important;
+}
+
+/* Success Dialog Allocation Details */
+.success-allocation-details {
+  background: linear-gradient(135deg, #556b2f 0%, #6b8e23 100%) !important;
+  padding: 20px !important;
+}
+
+.success-detail-row {
+  padding: 10px 16px !important;
+  margin-bottom: 10px !important;
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+}
+
+.success-detail-label {
+  color: #1a237e !important;
+  font-size: 0.95rem !important;
+  font-weight: 600 !important;
+  text-shadow: 0 0 3px rgba(255, 255, 255, 0.9) !important;
+}
+
+.success-detail-value {
+  color: #1a237e !important;
+  font-size: 0.95rem !important;
+  font-weight: 500 !important;
+  text-shadow: 0 0 3px rgba(255, 255, 255, 0.9) !important;
+}
+
+.success-section-title {
+  color: #1a237e !important;
+  font-size: 1.1rem !important;
+  font-weight: 700 !important;
+  margin: 16px 0 12px !important;
+  padding-bottom: 8px !important;
+  text-shadow: 0 0 3px rgba(255, 255, 255, 0.9) !important;
+}
+
+.success-site-name {
+  color: #1a237e !important;
+  font-size: 1.05rem !important;
+  font-weight: 600 !important;
+  text-shadow: 0 0 3px rgba(255, 255, 255, 0.9) !important;
+}
+
+.success-power-value {
+  color: #1a237e !important;
+  font-size: 1rem !important;
+  font-weight: 700 !important;
+  text-shadow: 0 0 3px rgba(255, 255, 255, 0.9) !important;
+}
+
+.success-priority-tag {
+  color: #1a237e !important;
+  font-weight: 600 !important;
+  font-size: 0.9rem !important;
+  padding: 2px 8px !important;
+  text-shadow: 0 0 3px rgba(255, 255, 255, 0.9) !important;
+}
+
+.success-time-value {
+  color: #1a237e !important;
+  font-family: monospace !important;
+  font-size: 0.95rem !important;
+  text-shadow: 0 0 3px rgba(255, 255, 255, 0.9) !important;
+}
+
+.success-created-date {
+  color: #1a237e !important;
+  font-family: monospace !important;
+  font-size: 0.9rem !important;
+  text-shadow: 0 0 3px rgba(255, 255, 255, 0.9) !important;
+}
+
+/* Success Dialog Container */
+.MuiDialog-paper.success-dialog {
+  background: linear-gradient(135deg, #556b2f 0%, #6b8e23 100%) !important;
+}
+
+.success-dialog-title {
+  color: #1a237e !important;
+  font-size: 1.2rem !important;
+  font-weight: 700 !important;
+  text-shadow: 0 0 3px rgba(255, 255, 255, 0.9) !important;
+  padding-bottom: 12px !important;
+  margin-bottom: 16px !important;
+}
+
+/* Success Message */
+.success-message {
+  color: #1a237e !important;
+  font-size: 1rem !important;
+  font-weight: 500 !important;
+  text-shadow: 0 0 3px rgba(255, 255, 255, 0.9) !important;
+  margin-bottom: 16px !important;
+}
+
+/* Section Divider */
+.success-divider {
+  margin: 16px 0 !important;
+  opacity: 0.2 !important;
+}
+
+/* Below Allocation Details Text */
+.allocation-footer {
+  background: linear-gradient(135deg, #556b2f 0%, #6b8e23 100%) !important;
+  padding: 16px !important;
+  margin-top: 16px !important;
+}
+
+.footer-text {
+  color: #1a237e !important;
+  font-size: 0.95rem !important;
+  font-weight: 500 !important;
+  text-shadow: 0 0 3px rgba(255, 255, 255, 0.9) !important;
+  margin-bottom: 8px !important;
+}
+
+.footer-text-bold {
+  color: #1a237e !important;
+  font-size: 1rem !important;
+  font-weight: 600 !important;
+  text-shadow: 0 0 3px rgba(255, 255, 255, 0.9) !important;
+}
+
+.footer-section {
+  background: linear-gradient(135deg, #556b2f 0%, #6b8e23 100%) !important;
+  padding: 12px 16px !important;
+  margin-bottom: 12px !important;
+}
+
+.footer-label {
+  color: #1a237e !important;
+  font-size: 0.95rem !important;
+  font-weight: 600 !important;
+  text-shadow: 0 0 3px rgba(255, 255, 255, 0.9) !important;
+  margin-bottom: 4px !important;
+}
+
+.footer-value {
+  color: #1a237e !important;
+  font-size: 0.95rem !important;
+  font-weight: 500 !important;
+  text-shadow: 0 0 3px rgba(255, 255, 255, 0.9) !important;
+}
+
+.footer-note {
+  color: #1a237e !important;
+  font-size: 0.9rem !important;
+  font-style: italic !important;
+  text-shadow: 0 0 3px rgba(255, 255, 255, 0.9) !important;
+  margin-top: 8px !important;
+}
+
+/* Footer Links */
+.footer-link {
+  color: #1a237e !important;
+  text-decoration: underline !important;
+  font-weight: 600 !important;
+  text-shadow: 0 0 3px rgba(255, 255, 255, 0.9) !important;
+}
+
+.footer-link:hover {
+  opacity: 0.9 !important;
+}
+
+/* Footer Dividers */
+.footer-divider {
+  border-top: 1px solid rgba(255, 255, 255, 0.8) !important;
+  margin: 12px 0 !important;
+}
+
+/* Footer Status */
+.footer-status {
+  display: flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  padding: 8px 12px !important;
+  background: linear-gradient(135deg, #556b2f 0%, #6b8e23 100%) !important;
+  margin-top: 8px !important;
+}
+
+.footer-status-text {
+  color: #1a237e !important;
+  font-size: 0.95rem !important;
+  font-weight: 600 !important;
+  text-shadow: 0 0 3px rgba(255, 255, 255, 0.9) !important;
+}
+
+.footer-status-icon {
+  color: #1a237e !important;
+  font-size: 1.1rem !important;
+  text-shadow: 0 0 3px rgba(255, 255, 255, 0.9) !important;
+}
+
+.allocation-root {
+  color: #ffffff !important;
+}
+
+.allocation-root * {
+  color: inherit !important;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3) !important;
+}
+
+/* Override for Material-UI components */
+.allocation-root .MuiInputBase-root,
+.allocation-root .MuiButton-root,
+.allocation-root .MuiTypography-root,
+.allocation-root .MuiInputLabel-root,
+.allocation-root .MuiFormHelperText-root,
+.allocation-root .MuiTableCell-root,
+.allocation-root .MuiSelect-root,
+.allocation-root .MuiMenuItem-root,
+.allocation-root .MuiSvgIcon-root,
+.allocation-root .MuiLink-root {
+  color: #ffffff !important;
+}
+
+/* Success Dialog and Details */
+.success-allocation-details,
+.success-detail-row,
+.success-detail-label,
+.success-detail-value,
+.success-section-title,
+.success-site-name,
+.success-power-value,
+.success-priority-tag,
+.success-time-value,
+.success-created-date,
+.success-dialog-title,
+.success-message {
+  color: #ffffff !important;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3) !important;
+}
+
+/* Footer and Status */
+.allocation-footer,
+.footer-text,
+.footer-text-bold,
+.footer-section,
+.footer-label,
+.footer-value,
+.footer-note,
+.footer-link,
+.footer-status-text,
+.footer-status-icon {
+  color: #ffffff !important;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3) !important;
+}
+
+/* Input fields placeholder */
+.allocation-root .MuiInputBase-input::placeholder {
+  color: rgba(255, 255, 255, 0.7) !important;
+}
+
+/* Focused input label */
+.allocation-root .MuiInputLabel-root.Mui-focused {
+  color: #ffffff !important;
+}
+
+/* Table headers and cells */
+.allocation-root .MuiTableHead-root .MuiTableCell-root,
+.allocation-root .MuiTableBody-root .MuiTableCell-root {
+  color: #ffffff !important;
+}
+
+/* Dialog components */
+.allocation-root .MuiDialog-paper {
+  color: #ffffff !important;
+}
+
+/* Links */
+.allocation-root a {
+  color: #ffffff !important;
+  text-decoration: underline !important;
+}
+
+/* Icons */
+.allocation-root .fa-icon,
+.allocation-root .MuiSvgIcon-root {
+  color: #ffffff !important;
+}

@@ -1,0 +1,11 @@
+
+- site-1.jpeg  (Salem windmil)
+- site-2.jpeg  (Namakkal solarpanel)
+- site-3.jpg  (Erode windmill )
+- site-4.jpeg  (Trichy solarpanel)
+- site-5.jpeg  (Salem solar panel)
+- site-6.jpeg  (Karur windmill)
+- site-7.jpeg  (Trichy windmill)
+- site-8.jpeg  (Nalippalayam windmill)
+- site-9.jpeg  (Coimbatore solar panel)
+- site-10.jpeg (Chennai windmill)

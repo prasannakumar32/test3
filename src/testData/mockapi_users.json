@@ -1,0 +1,197 @@
+[
+  {
+    "id": "1",
+    "username": "testcase1",
+    "password": "strio@123",
+    "sites": ["PS1", "PW1", "CS1", "CS2", "CS3"],
+    "role": "user",
+    "createdAt": "2024-01-24T10:00:00Z",
+    "allSites": [
+      {
+        "id": "PS1",
+        "name": "Pudukottai Solar Plant",
+        "location": "Pudukottai, Tamil Nadu",
+        "capacity": 50,
+        "type": "SOLAR"
+      },
+      {
+        "id": "PW1",
+        "name": "Tirunelveli Wind Banking",
+        "location": "Tirunelveli, Tamil Nadu",
+        "capacity": 75,
+        "type": "WIND"
+      },
+      {
+        "id": "CS1",
+        "name": "Polyspin Exports Ltd Expansion Unit",
+        "location": "Rajapalayam, Tamil Nadu",
+        "type": "INDUSTRIAL"
+      },
+      {
+        "id": "CS2",
+        "name": "PEL Textiles",
+        "location": "Rajapalayam, Tamil Nadu",
+        "type": "INDUSTRIAL"
+      },
+      {
+        "id": "CS3",
+        "name": "M/s A. Ramar and Sons",
+        "location": "Rajapalayam, Tamil Nadu",
+        "type": "INDUSTRIAL"
+      }
+    ],
+    "consumption_data": [
+        {
+            "product_id": "P001",
+            "quantity_consumed": 30,
+            "consumption_timestamp": "2024-12-10T13:26:48+05:30",
+            "site_type": "INDUSTRIAL",
+            "site_name": "Pudukottai Solar Plant"
+        },
+        {
+            "product_id": "P002",
+            "quantity_consumed": 50,
+            "consumption_timestamp": "2024-12-10T13:26:48+05:30",
+            "site_type": "COMMERCIAL",
+            "site_name": "Tirunelveli Wind Banking"
+        },
+        {
+            "product_id": "P003",
+            "quantity_consumed": 20,
+            "consumption_timestamp": "2024-12-10T13:26:48+05:30",
+            "site_type": "INDUSTRIAL",
+            "site_name": "Rajapalayam Industrial"
+        }
+    ]
+  },
+  {
+    "id": "2",
+    "username": "strioadmin",
+    "password": "strio@123",
+    "sites": ["PS1", "PW1", "CS1", "CS2", "CS3"],
+    "role": "superuser",
+    "createdAt": "2024-01-24T10:15:00Z",
+    "allSites": [
+      {
+        "id": "PS1",
+        "name": "Pudukottai Solar Plant",
+        "location": "Pudukottai, Tamil Nadu",
+        "capacity": 50,
+        "type": "SOLAR"
+      },
+      {
+        "id": "PW1",
+        "name": "Tirunelveli Wind Banking",
+        "location": "Tirunelveli, Tamil Nadu",
+        "capacity": 75,
+        "type": "WIND"
+      },
+      {
+        "id": "CS1",
+        "name": "Polyspin Exports Ltd Expansion Unit",
+        "location": "Rajapalayam, Tamil Nadu",
+        "type": "INDUSTRIAL"
+      },
+      {
+        "id": "CS2",
+        "name": "PEL Textiles",
+        "location": "Rajapalayam, Tamil Nadu",
+        "type": "INDUSTRIAL"
+      },
+      {
+        "id": "CS3",
+        "name": "M/s A. Ramar and Sons",
+        "location": "Rajapalayam, Tamil Nadu",
+        "type": "INDUSTRIAL"
+      }
+    ],
+    "consumption_data": [
+        {
+            "product_id": "P001",
+            "quantity_consumed": 30,
+            "consumption_timestamp": "2024-12-10T13:26:48+05:30",
+            "site_type": "INDUSTRIAL",
+            "site_name": "Pudukottai Solar Plant"
+        },
+        {
+            "product_id": "P002",
+            "quantity_consumed": 50,
+            "consumption_timestamp": "2024-12-10T13:26:48+05:30",
+            "site_type": "COMMERCIAL",
+            "site_name": "Tirunelveli Wind Banking"
+        },
+        {
+            "product_id": "P003",
+            "quantity_consumed": 20,
+            "consumption_timestamp": "2024-12-10T13:26:48+05:30",
+            "site_type": "INDUSTRIAL",
+            "site_name": "Rajapalayam Industrial"
+        }
+    ]
+  },
+  {
+    "id": "3",
+    "username": "striouser",
+    "password": "strio@123",
+    "sites": ["PS1", "PW1", "CS1", "CS2", "CS3"],
+    "role": "viewer",
+    "createdAt": "2024-01-24T10:30:00Z",
+    "allSites": [
+      {
+        "id": "PS1",
+        "name": "Pudukottai Solar Plant",
+        "location": "Pudukottai, Tamil Nadu",
+        "capacity": 50,
+        "type": "SOLAR"
+      },
+      {
+        "id": "PW1",
+        "name": "Tirunelveli Wind Banking",
+        "location": "Tirunelveli, Tamil Nadu",
+        "capacity": 75,
+        "type": "WIND"
+      },
+      {
+        "id": "CS1",
+        "name": "Polyspin Exports Ltd Expansion Unit",
+        "location": "Rajapalayam, Tamil Nadu",
+        "type": "INDUSTRIAL"
+      },
+      {
+        "id": "CS2",
+        "name": "PEL Textiles",
+        "location": "Rajapalayam, Tamil Nadu",
+        "type": "INDUSTRIAL"
+      },
+      {
+        "id": "CS3",
+        "name": "M/s A. Ramar and Sons",
+        "location": "Rajapalayam, Tamil Nadu",
+        "type": "INDUSTRIAL"
+      }
+    ],
+    "consumption_data": [
+        {
+            "product_id": "P001",
+            "quantity_consumed": 30,
+            "consumption_timestamp": "2024-12-10T13:26:48+05:30",
+            "site_type": "INDUSTRIAL",
+            "site_name": "Pudukottai Solar Plant"
+        },
+        {
+            "product_id": "P002",
+            "quantity_consumed": 50,
+            "consumption_timestamp": "2024-12-10T13:26:48+05:30",
+            "site_type": "COMMERCIAL",
+            "site_name": "Tirunelveli Wind Banking"
+        },
+        {
+            "product_id": "P003",
+            "quantity_consumed": 20,
+            "consumption_timestamp": "2024-12-10T13:26:48+05:30",
+            "site_type": "INDUSTRIAL",
+            "site_name": "Rajapalayam Industrial"
+        }
+    ]
+  }
+]
