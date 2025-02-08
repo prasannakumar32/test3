@@ -1,0 +1,204 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "NPM Package JSON",
+  "definitions": {
+    "person": {
+      "description": "A person who has been involved in creating or maintaining the package",
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "url": {
+          "type": "string",
+          "format": "uri"
+        },
+        "email": {
+          "type": "string",
+          "format": "email"
+        }
+      },
+      "required": [
+        "name"
+      ]
+    }
+  },
+  "type": "object",
+  "required": [
+    "name",
+    "version"
+  ],
+  "properties": {
+    "name": {
+      "description": "The name of the package",
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 214
+    },
+    "version": {
+      "description": "The version of the package",
+      "type": "string",
+      "pattern": "^(?!v)[0-9]+\\.[0-9]+\\.[0-9]+(-.*)?$"
+    },
+    "description": {
+      "description": "A brief description of the package",
+      "type": "string"
+    },
+    "keywords": {
+      "description": "Keywords associated with the package",
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "homepage": {
+      "description": "The URL to the homepage of the package",
+      "type": "string",
+      "format": "uri"
+    },
+    "bugs": {
+      "description": "The URL to the issue tracker of the package",
+      "anyOf": [
+        {
+          "type": "string",
+          "format": "uri"
+        },
+        {
+          "type": "object",
+          "properties": {
+            "url": {
+              "type": "string",
+              "format": "uri"
+            },
+            "email": {
+              "type": "string",
+              "format": "email"
+            }
+          },
+          "additionalProperties": false
+        }
+      ]
+    },
+    "license": {
+      "description": "The license for the package",
+      "type": "string"
+    },
+    "author": {
+      "$ref": "#/definitions/person"
+    },
+    "contributors": {
+      "description": "A list of people who contributed to the package",
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/person"
+      }
+    },
+    "repository": {
+      "description": "The repository information of the package",
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string"
+        },
+        "url": {
+          "type": "string",
+          "format": "uri"
+        },
+        "directory": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "type",
+        "url"
+      ],
+      "additionalProperties": false
+    },
+    "scripts": {
+      "description": "Scripts that can be run using npm run",
+      "type": "object",
+      "additionalProperties": {
+        "type": "string"
+      }
+    },
+    "config": {
+      "description": "Configuration parameters used in package scripts that can be overridden",
+      "type": "object",
+      "additionalProperties": {
+        "type": "string"
+      }
+    },
+    "dependencies": {
+      "description": "Dependencies of the package",
+      "type": "object",
+      "additionalProperties": {
+        "type": "string"
+      }
+    },
+    "devDependencies": {
+      "description": "Development dependencies of the package",
+      "type": "object",
+      "additionalProperties": {
+        "type": "string"
+      }
+    },
+    "peerDependencies": {
+      "description": "Peer dependencies of the package",
+      "type": "object",
+      "additionalProperties": {
+        "type": "string"
+      }
+    },
+    "optionalDependencies": {
+      "description": "Optional dependencies of the package",
+      "type": "object",
+      "additionalProperties": {
+        "type": "string"
+      }
+    },
+    "engines": {
+      "description": "Specifies the engines required by the package",
+      "type": "object",
+      "properties": {
+        "node": {
+          "type": "string"
+        },
+        "npm": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": {
+        "type": "string"
+      }
+    },
+    "os": {
+      "description": "Specifies the OS compatible with the package",
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "cpu": {
+      "description": "Specifies the CPU architectures compatible with the package",
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "private": {
+      "description": "If set to true, prevents publishing the package",
+      "type": "boolean"
+    },
+    "publishConfig": {
+      "description": "Configures publishing behavior",
+      "type": "object",
+      "properties": {
+        "registry": {
+          "type": "string",
+          "format": "uri"
+        }
+      },
+      "additionalProperties": false
+    }
+  }
+}
